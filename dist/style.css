@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Hind+Madurai:wght@300;500&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+/* -------------------------------------------------------------------------------
+                                Hero Section
+------------------------------------------------------------------------------  */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),
+                url(./img/restaurant.jpg) 
+                no-repeat center center;
+    background-size: cover;
+}
+
+.heading-1 {
+    font-size: 7rem;
+    font-family: 'Architects Daughter', cursive;
+    width: 100%;
+    text-align: center;
+    color: #eee;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    word-spacing: 1em;
+    letter-spacing: 15px;
+    /* border: 5px solid salmon; */
+}
+
+nav {
+    padding: 1rem;
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #eee;
+    margin-left: 20px;
+}
+
+/* -------------------------------------------------------------------------------
+                                Gallery Section
+------------------------------------------------------------------------------  */
+.gallery-section {
+    position: relative;
+    height: 100vh;
+    
+}
+
+.tabs {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.tab {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.2rem;
+    margin: 0;
+    border: none;
+    background-color: rgba(46, 22, 8,.4);
+    transition: all .2s;
+    color: #fff;
+}
+
+.tab:hover {
+    background-color: rgba(46, 22, 8, .8);
+}
+
+.tab:focus {
+    outline: none;
+}
+.tab:active {
+    background-color: rgba(46, 22, 8, 1);
+}
+
+.selected {
+    background-color: rgba(49, 22, 8,.8);
+}
+
+.tab:not(:first-of-type){
+    border-left: 1px solid #fafafa;
+}
+
+.gallery-images {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-img:nth-of-type(2){
+    grid-column: auto / span 2;
+}
+.gallery-img:nth-of-type(3){
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+}
+
+/* -------------------------------------------------------------------------------
+                                Contact Section
+------------------------------------------------------------------------------  */
+
+.contact-section{
+    position: relative;
+    background-color: #fafafa;
+    height: 70vh;
+    text-align: center;
+}
+
+.heading-2 {
+    display: inline-block;
+    font-size: 2.5rem;
+    padding: 1rem;
+    border-bottom: 2px solid rgb(49, 49, 49);
+    margin-bottom: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    width: 30%;
+    margin-top: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form div {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form input,
+.form textarea {
+    padding: .7rem;
+    font-size: 1.2rem;
+    align-self: flex-end;
+    font-family: inherit;
+    width: 70%;
+    border-radius: 15px;
+    border: 0;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+}
+
+.form textarea {
+    resize: vertical;
+    height: 15rem;
+    
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(46, 22, 8);
+    color: #fff;
+    margin: 2rem;
+    margin-right: 0;
+    align-self: flex-end;
+}
+/* -------------------------------------------------------------------------------
+Footer Section
+------------------------------------------------------------------------------  */
+
+.footer-section {
+    height: 30vh;
+    color: #fff;
+    background-color: rgb(46, 22, 8);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.heading-3{
+    font-size: 2rem;
+}
+
+.footer-items--locations{
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+    font-size: 1.3rem;
+    margin-top: 3rem;
+}
+
+.footer-items--hours {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+
+}
